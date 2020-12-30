@@ -1,6 +1,25 @@
 # go-dist
 
-Distribution script for programs written in Go
+Distribution automation script for programs written in Go
+
+## Working with `build.sh`
+
+[![asciicast](https://asciinema.org/a/381907.svg)](https://asciinema.org/a/381907)
+
+## What the script does
+
+It builds executable binaries for different operating systems using the `GOOS` feature. The script also builds debian packages for both architectures.
+Currently supports these systems:
+
+```
+1. darwin/386        8. linux/amd64    15. linux/mips64    22. openbsd/arm
+2. darwin/amd64      9. linux/arm      16. linux/mips64le  23. plan9/386
+3. dragonfly/amd64  10. linux/arm64    17. netbsd/386      24. plan9/amd64
+4. freebsd/386      11. linux/ppc64    18. netbsd/amd64    25. solaris/amd64
+5. freebsd/amd64    12. linux/ppc64le  19. netbsd/arm      26. windows/386
+6. freebsd/arm      13. linux/mips     20. openbsd/386     27. windows/amd64
+7. linux/386        14. linux/mipsle   21. openbsd/amd64
+```
 
 ## Usage
 
@@ -32,10 +51,6 @@ $ chmod 777 ./build.sh
 ```bash
 $ ./build.sh
 ```
-
-## Working with `build.sh`
-
-[![asciicast](https://asciinema.org/a/381907.svg)](https://asciinema.org/a/381907)
 
 ## Couple of things to note
 
